@@ -1,7 +1,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-project(SfmlWithCMake VERSION 1.0)
+project(Minesweeper VERSION 1.0)
 
 include(FetchContent)
 
@@ -21,7 +21,7 @@ include_directories(include)
 file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})
 
 add_executable(
-	SfmlWithCMake
+	Minesweeper
 	src/main.cpp
 	src/Board.cpp
 	src/Random.cpp
@@ -34,6 +34,8 @@ add_executable(
 )
 
 target_link_libraries(
-	SfmlWithCMake
+	Minesweeper
 	sfml-graphics
 )
+
+install(TARGETS Minesweeper DESTINATION bin)
