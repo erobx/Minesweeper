@@ -14,7 +14,7 @@ void Tile::SetTileHidden() {
 	isHidden = true;
 	isFlag = false;
 	isMine = false;
-	numMines = NULL;
+	numMines = 0;
 }
 
 void Tile::SetPosition(float xpos, float ypos) {
