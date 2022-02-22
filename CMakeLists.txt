@@ -38,4 +38,4 @@ target_link_libraries(
 	sfml-graphics
 )
 
-install(TARGETS Minesweeper DESTINATION bin)
+install(TARGETS Minesweeper DESTINATION CMAKE_SOURCE_DIR)
