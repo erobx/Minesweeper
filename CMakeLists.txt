@@ -16,10 +16,23 @@ FetchContent_MakeAvailable(SFML)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
 
+include_directories(include)
+
+file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})
+
 add_executable(
 	SfmlWithCMake
-	main.cpp
+	src/main.cpp
+	src/Board.cpp
+	src/Random.cpp
+	src/TextureManager.cpp
+	src/Tile.cpp
+	include/Board.h
+	include/Random.h
+	include/TextureManager.h
+	include/Tile.h
 )
+
 target_link_libraries(
 	SfmlWithCMake
 	sfml-graphics
