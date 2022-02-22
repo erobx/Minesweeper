@@ -148,7 +148,7 @@ void Board::DrawRemaining(sf::RenderWindow& window) {
 }
 
 void Board::Reset() {
-    vector<int> config = LoadConfig("boards/config.cfg");
+    vector<int> config = LoadConfig("assets/boards/config.cfg");
     numCols = config.at(0);
     numRows = config.at(1);
     numMines = config.at(2);
@@ -207,7 +207,7 @@ void Board::Toggle() {
 
 void Board::LoadTest(string num) {
     Reset();
-    string filename = "boards/testboard" + num + ".brd";
+    string filename = "assets/boards/testboard" + num + ".brd";
     ifstream myfile(filename);
     if (!myfile.is_open()) {
         cout << "Could not open file " << filename << endl;
